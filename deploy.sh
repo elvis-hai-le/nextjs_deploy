@@ -2,5 +2,5 @@
 cd /home/ubuntu/nextjs_deploy/
 git pull origin master
 npm install &&
-npm build &&
+npm run build &&
 pm2 restart nextjsdeploy

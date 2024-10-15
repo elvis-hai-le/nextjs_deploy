@@ -19,6 +19,10 @@ const config: Config = {
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: "v8",
 
+  testEnvironment: 'jsdom',
+
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js']
+
 };
 
 export default createJestConfig(config);
