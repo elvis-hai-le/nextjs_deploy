@@ -14,7 +14,7 @@ jobs:
           node-version: 20
 
       - name: Install NextJS packages
-        run: yarn install
+        run: npm install
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -24,7 +24,7 @@ jobs:
           aws-region: ap-southeast-2
           
       - name: Build Application and Run unit Test
-        run: yarn build 
+        run: npm build 
         # include unit test here
 
   continuous-deployment:
