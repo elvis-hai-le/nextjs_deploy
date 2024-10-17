@@ -23,6 +23,7 @@ jobs:
           path: |
             dist
             node_modules
+            package.json
           
   test:
     runs-on: ubuntu-latest
