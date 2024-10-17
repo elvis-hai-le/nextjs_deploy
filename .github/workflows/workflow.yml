@@ -24,10 +24,9 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-      # - name: Install dependencies and build
-      # - if: ${{ steps.cache-njs.outputs.cache-hit != 'true' }}
-      #   name: Generate new build
-      #   run: npm run build
+      - name: Install dependencies and build
+        if: ${{ steps.cache-njs.outputs.cache-hit != 'true' }}
+        run: npm run build
       #   run: |
       #     npm ci
       #     npm run build
