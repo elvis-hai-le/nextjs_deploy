@@ -5,12 +5,14 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+.swc
 
 # testing
 /coverage
 
 # next.js
 /.next/
+/dist
 /out/
 
 # production
@@ -27,9 +29,6 @@ yarn-error.log*
 
 # local env files
 .env*.local
-
-# vercel
-.vercel
 
 # typescript
 *.tsbuildinfo
