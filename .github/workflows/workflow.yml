@@ -26,7 +26,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
       - name: Install dependencies and build
         if: ${{ steps.cache-njs.outputs.cache-hit != 'true' }}
-        run: npm run build
+        run: npm ci && npm run build
       #   run: |
       #     npm ci
       #     npm run build
